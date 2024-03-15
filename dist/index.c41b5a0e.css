@@ -1,0 +1,132 @@
+.nav {
+  border: 2px solid #000;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  display: flex;
+}
+
+.nav-logo {
+  cursor: pointer;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  font-size: 1.3rem;
+  display: flex;
+}
+
+.nav-link {
+  width: 40%;
+  height: 100%;
+}
+
+.nav-link ul {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  display: flex;
+}
+
+.nav-link li {
+  width: 12%;
+}
+
+.nav-link ul li a {
+  color: #fff;
+  width: 100%;
+  margin-left: 2px;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.hero {
+  color: #fff;
+  letter-spacing: .2rem;
+  width: 60%;
+  height: 300px;
+  margin: 100px auto;
+  font-size: 1.8em;
+}
+
+.hero h1 span {
+  color: pink;
+  font-weight: bolder;
+}
+
+.hero h1 {
+  font-size: 2em;
+}
+
+form.example {
+  width: 80%;
+}
+
+form.example input[type="text"] {
+  float: left;
+  background: #e6e3e3;
+  border: 1px solid #fff;
+  border-radius: 10rem 0 0 10rem;
+  width: 75%;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+form.example button {
+  float: left;
+  color: #fff;
+  cursor: pointer;
+  background: #f0adb8;
+  border: 1px solid #fff;
+  border-left: none;
+  border-radius: 0 10rem 10rem 0;
+  width: 25%;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.footer {
+  color: #fff;
+  width: 100%;
+  height: 100px;
+  padding: 10px 10px 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-explore {
+  letter-spacing: .1rem;
+  float: right;
+  background-color: #f0adb8;
+  border: 1px solid #000;
+  border-radius: 100em;
+  align-items: center;
+  width: 12%;
+  height: 2.5em;
+  margin-bottom: 18px;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  display: flex;
+}
+
+.footer-explore a {
+  color: #fff;
+  margin: 0 auto;
+  text-decoration: none;
+}
+/*# sourceMappingURL=index.c41b5a0e.css.map */
