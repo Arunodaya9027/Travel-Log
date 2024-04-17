@@ -1,0 +1,61 @@
+sign-in {
+    background-color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(https://www.betterplace.co.in/blog/wp-content/uploads/2020/04/Millennial-Friendly-Work-Culture.jpg);
+}
+
+h6 {
+    color: #023035;
+}
+
+img {
+    height: 760px;
+    width: 100%;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #808080;
+}
+
+#gender {
+    height: 100%;
+    padding: 6px;
+    border: none;
+    border-bottom: 1px solid #808080;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    border-radius: 5% 5% 5% 5%;
+    box-shadow: 0 4px 8px 0 #000000;
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 0 20px 20px rgba(6, 49, 50, 0.5);
+}
+
+.input-group span {
+    position: absolute;
+    bottom: 7px;
+    right: 17px;
+    font-size: 14px;
+    color: red;
+    z-index: 20;
+}
+
+#dob-error, #gender-error {
+    right: 60px;
+}
+
+#course-error {
+    bottom: 12px;
+    right: 22px;
+}
+
+.input-group i {
+    color: lightseagreen;
+}

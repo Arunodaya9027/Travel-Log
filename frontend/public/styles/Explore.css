@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.bg{
+    /* width:max-content;
+    height: 100vh;*/
+    min-width: 162%;
+    background: rgba(0, 0, 0, 0.7) url("../../src/assets/head/India.png");
+    background-size: cover;
+    background-blend-mode: darken;
+    overflow: auto;
+    overflow-x: hidden; 
+}
+
+.bg .heading{
+    color: white;
+    font-size: 60px;
+}
+
+.card-body{
+    padding: 0px;
+    background-color: antiquewhite;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
