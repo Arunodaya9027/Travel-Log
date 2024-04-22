@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const connect = require('./db/db.js');
 const path = require('path');
 const User = require('./model/userModel.js');
@@ -6,17 +7,21 @@ const Explore = require('./model/exploreModel.js');
 const methodOverride = require( 'method-override' );
 const ejsmate = require('ejs-mate');
 const userRouter = require('./routes/userRoutes.js')
-const exploreRouter = require('./routes/userRoutes.js')
+const exploreRouter = require('./routes/exploreRoutes.js')
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
+// const multer = require('multer')
+// const bcrypt = require('bcrypt')
+// const bodyParser = require('body-parser');
 const app = express();
 const port = 5000;
 app.use(express.json());
+app.use(cors());
 
 app.use(session({
-    secret: 'keyboard cat',
+    secret: 'travister',
     resave: false,
     saveUninitialized: true,
     cookie:{
@@ -24,6 +29,20 @@ app.use(session({
         maxAge: 10000
     }
 }))
+
+// //img upload
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//        cb(null, './uploads')
+  
+//     }, filename: function (req, file, cb) {
+//        cb(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
+//     },
+//   })
+  
+//   // const upload = multer({ storage });
+  
+//   const uploader = multer({ dest: 'uploads/' });
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended:true})); // parse url encoded data

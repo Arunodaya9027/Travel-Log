@@ -1,11 +1,11 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import "../../../public/styles/Explore.css"
-function CardMod({ title, src, content, handleSubmit }) {
+function CardMod({ id, title, src, content, handleSubmit }) {
   return (
     <div>
     
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem" }} key={id}>
         <Card.Title style={{fontSize:"2rem"}}>{title}</Card.Title>
         <Card.Body className="card-body">
           <Card.Img style={{height:"200px"}} src={src} />

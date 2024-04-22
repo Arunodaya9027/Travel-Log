@@ -1,9 +1,9 @@
 import React from "react";
 import "../../../public/styles/Cards.css"
 
-function LandScapeCard({ placeName,src,history,ticket,timing }) {
+function LandScapeCard({ id,placeName,src,history,ticket,timing }) {
   return (
-    <div className="landScapeCard">
+    <div className="landScapeCard" key={id}>
       <span className="imgContainer">
         <img src={src} />
       </span>

@@ -12,10 +12,6 @@ const exploreSchema = new mongoose.Schema({
     description : {
         type : String,
         required : true
-    },
-    navigate : {
-        type : String,
-        required : true
     }
 });
 

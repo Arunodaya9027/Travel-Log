@@ -1,11 +1,12 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import MainNav from "../components/Navbar/MainNav";
 import LandScapeCard from "../components/Cards/LandScapeCard";
 import "../../public/styles/Explore.css";
 import RightBar from "../components/Cards/RightBar";
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 
 function Cards() {
+  const { id } = useParams();
   const [cards, setCards] = useState([]);
   const navigate= useNavigate()
 
@@ -13,11 +14,13 @@ function Cards() {
     navigate("/new/place")
   }
 
-  const getData = async() => {
+  const getData = async(id) => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/explore/:id", {
+      console.log(id);
+      const response = await fetch(`http://127.0.0.1:5000/explore/${id}`, {
         method: 'GET',
       });
+      console.log(response);
       const data = await response.json();
       setCards(data);
     } catch (error) {
@@ -26,8 +29,8 @@ function Cards() {
   }
 
   useEffect(() => {
-    getData();
-  }, []);
+    getData(id);
+  }, [id]);
 
   return (
     <div className="bg explore">
@@ -44,6 +47,7 @@ function Cards() {
           <div style={{ gap: "10px" }}>
           {cards.slice().reverse().map(card => (
             <LandScapeCard
+              key={card._id}
               placeName={card.placeName}
               src={card.image}
               history={card.description}

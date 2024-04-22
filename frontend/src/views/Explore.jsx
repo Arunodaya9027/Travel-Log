@@ -4,18 +4,16 @@ import { Card, Button } from "react-bootstrap";
 import CardMod from '../components/Explore/CardMod';
 import { useNavigate } from "react-router-dom";
 import MainNav from '../components/Navbar/MainNav';
+import Cards from './Cards';
 
 function Explore() {
     const [cards,setCards] = useState([]);
-
     const navigate = useNavigate()
 
-    const handleAgraSubmit = () => {
-      navigate('/explore/agra');
-    };
-  
-    const handleMumbaiSubmit = () => {
-      navigate('/explore/mumbai');
+    const handleSubmit = (id) => {
+      // postId(id);
+      console.log(id);
+      navigate(`/explore/${id}`);
     };
   
     const handleAddTrip = () => {
@@ -27,12 +25,36 @@ function Explore() {
         const response = await fetch("http://127.0.0.1:5000/explore", {
           method: 'GET',
         });
+        console.log(response);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const data = await response.json();
         setCards(data);
       } catch (error) {
         console.log(error);
       }
     }
+
+    // const postId = async(id) => {
+    //   try {
+    //     const response = await fetch("http://127.0.0.1:5000/explore", {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/json'
+    //       },
+    //       body: JSON.stringify(id)
+    //     });
+    //     if (!response.ok) {
+    //       throw new Error(`HTTP error! status: ${response.status}`);
+    //     } else {
+    //       console.log("Sended Successfully");
+    //     }
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // }
 
     useEffect(() => {
       getData();
@@ -48,10 +70,11 @@ function Explore() {
       <div className="container-fluid card-container">
         {cards.slice().map(card => (
           <CardMod
+            key={card._id}
             title={card.title}
             src={card.image}
             content={card.description}
-            handleSubmit={(e) => {navigate(card._id)}}
+            handleSubmit={() => {handleSubmit(card._id)}}
           />
         ))}
         {/* <CardMod

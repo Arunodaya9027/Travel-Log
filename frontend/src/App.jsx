@@ -22,7 +22,7 @@ function App() {
               <Route path="/login" element={ <SignIn/>} />
               <Route path="/register" element={ <SignUp/>} />
               <Route path="/explore" element={<Explore />} />
-              <Route path="/explore/agra" element={<Cards />} />
+              <Route path="/explore/:id" element={<Cards />} />
               <Route path="/new/*" element={<NewTrip/>} />
               {/* <Route path='*' element={<h1>404 - Page not found</h1>} /> */}
           </Routes>
