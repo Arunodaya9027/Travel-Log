@@ -1,0 +1,37 @@
+.Main{
+    width: 100%;
+    height: 100vh;
+    line-height: 1.8rem;
+}
+.Main-inner{
+    color: white;
+    width: 60%;
+    height: 60vh;
+    margin-top:5% ;
+    margin-left: 5%;
+    padding: 10px;
+    text-align: left;
+}
+.Main-inner h1{
+    font-weight: bolder;
+    font-size: 4rem;
+}
+.Main-inner h3{
+    font-size: 1.3rem;
+}
+.Main-book{
+    border: 1px solid white;
+    width: 18%;
+    height: 10%;    
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 100rem;
+    background-color: rgb(128, 125, 125);
+}
+.Main-book a{
+    margin: 0 auto;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+}

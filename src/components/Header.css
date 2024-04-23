@@ -1,0 +1,40 @@
+.nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+.nav-logo{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: white;
+    /* border: 2px solid black; */
+    width: 15%;
+}
+.nav-link{
+    width: 40%;
+    height: 100%;
+}
+.nav-link ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+.nav-link li{
+    width: 12%;
+}
+.nav-link ul li a{    
+    font-size: 1.3rem;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    margin-left: 2px;
+}
