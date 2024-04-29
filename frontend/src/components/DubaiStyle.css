@@ -1,0 +1,7 @@
+.dubai-cont {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7) url("../assets/herodubai.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+  }

@@ -1,0 +1,40 @@
+.india-cont {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .Main {
+  width: 100%;
+  /* height: 100vh; */
+  line-height: 1.8rem;
+}
+
+.cont-india {
+  background: rgba(0, 0, 0, 0.7) url("../assets/heroindia.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.cont-newyork {
+  background:rgba(0, 0, 0, 0.7) url("../assets/heronewyork.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.cont-switzerland {
+  background:rgba(0, 0, 0, 0.7) url("../assets/heroswitzerland.jpeg");
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.cont-paris {
+  background: rgba(0, 0, 0, 0.7) url("../assets/heroparis.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.cont-dubai {
+  background: rgba(0, 0, 0, 0.7) url("../assets/herodubai.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+}
