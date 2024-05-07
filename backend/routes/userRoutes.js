@@ -84,25 +84,73 @@ router.post('/auth/register', async (req, res) => {
     const hashPass = await bcrypt.hash(req.body.password, salt);
     console.log("pass2");
     const newUser = new User({
-        firstName: '',
-        lastName: '',
-        userName: req.body.userName,
+        firstName: "",
+        lastName: "",
+        username: req.body.userName,
+        dob:"",
+        gender:"Not Prefer To Say",
+        pincode:"",
+        phone:"",
         email: req.body.email,
         password: hashPass,
-        phone:'',
-        dob:null,
-        gender:'Not Prefer To Say',
-        pincode:'',
-        cfp: req.body.password
-    })
+        cfp: req.body.cfp,
+        cards: 3,
+        subscription: "Classic",
+        isEnd: "Never",
+        profilePic: "https://res.cloudinary.com/dfd6fmijq/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1715039682/profile/default-profile-pic_cwtbgb.jpg",
+        bio: "",
+        address: ""
+    });
     console.log(newUser);
     // adding the schemas of the user and cases
     // .populate;
     const user = await newUser.save();
+    console.log(user);
     res.status(200).json(user);
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.post('/setup-profile/:id', async (req, res) => {
+  console.log(req.body);
+  try {
+    console.log("pass1");
+    const id = req.params.id;
+    console.log(id);
+    const user = await User.find({ _id: id });
+    const {firstName, lastName, dob, gender, phone, pincode, profilePic, bio} = req.body;
+    console.log("pass2");
+    const update = {
+      $set: {
+        firstName: firstName,
+        lastName: lastName,
+        dob:dob,
+        gender:gender,
+        pincode: pincode,
+        phone:phone,
+        profilePic: profilePic,
+        bio: bio
+    }};
+    console.log("update");
+    const updatedUser = await User.updateOne({ _id: id }, update);
+    res.status(200).json({ message: "Profile updated successfully" });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/setup-profile/:id', async(req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  const user = await User.find({ _id: id })
+    .then((user) => {
+      console.log(user);
+      res.json(user);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
 });
 
 

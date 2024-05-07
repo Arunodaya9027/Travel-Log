@@ -10,7 +10,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    userName:{
+    username:{
+        type:String,
+        required:true
+    },
+    profilePic:{
         type:String,
         required:false
     },
@@ -42,6 +46,26 @@ const userSchema = new mongoose.Schema({
     cfp:{
         type:String,
         required:true
+    },
+    bio:{
+        type:String,
+        required:false
+    },
+    address:{
+        type:String,
+        required:false
+    },
+    cards:{
+        type: Number,
+        required: true
+    },
+    subscription:{
+        type:String,
+        required:true
+    },
+    isEnd: {
+        type: String,
+        required: true
     }
     // role: {
     //     type: String,

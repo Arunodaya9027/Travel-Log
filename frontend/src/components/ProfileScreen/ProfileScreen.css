@@ -1,4 +1,4 @@
-.user-page {
+/* .user-page {
     width: 100%;
     height: 230vh;
     background: rgba(0, 0, 0, 0.7) url("../assets/sunset-3497071_1280.jpg");
@@ -179,4 +179,20 @@
     color: #fff;
     border: none;
     cursor: pointer;
+  } */
+
+  .profilePic {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .profileContainer {
+    display: flex;
+    margin: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+    .profileContainer {
+      flex-direction: column-reverse;
+    }
   }

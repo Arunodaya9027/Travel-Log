@@ -125,9 +125,12 @@ input[type="radio"] {
   margin-top: 20px;
 }
 
-.form-inner form .field input, button{
+.form-inner form .field input{
   height: 100%;
   width: 100%;
+}
+
+.form-inner form .field input, button{
   outline: none;
   padding-left: 15px;
   border-radius: 15px;

@@ -1,11 +1,12 @@
 import { react, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './User.css';
 import Navbar from '../Navbar';
 import axios from 'axios';
 
 function User() {
   const [isLogin, setIsLogin] = useState(true);
-
+  const navigate = useNavigate();
   const switchToLogin = () => {
     setIsLogin(true);
   };
@@ -24,7 +25,7 @@ function User() {
     userName: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    cfp: ""
   });
 
   const handleInputChange = (e) => {
@@ -44,35 +45,37 @@ function User() {
     }
   }
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if(isLogin) {
-      const res = await axios.get("http://localhost:5000/auth/login", loginData);
-      res.then((res) => {
-        alert(res);
+      axios.post("http://localhost:5000/auth/login", loginData)
+      .then((res) => {
+        if (res.status === 200) { // Assuming successful login response has status 200
+          navigate('/'); // Redirect to dashboard on successful login
+        } else {
+          alert("Login failed!"); // Handle failed login with an appropriate message
+        }
       })
       .catch((err) => {
         alert("error", err);
       });
     } else {
-      const res = await axios.post("http://localhost:5000/auth/register", registerData);
-      console.log(res);
-      res.then((res) => {
-        alert(res);
+      console.log(registerData);
+      axios.post("http://localhost:5000/auth/register", registerData)
+      .then((res) => {
+        if (res.status === 200) { // Assuming successful register response has status 200
+          const id = res.data._id;
+          navigate(`/setup-profile/${id}`); // Redirect to profile setup page on successful register
+        } else {
+          alert("Login failed!"); // Handle failed signup with an appropriate message
+        }
       })
       .catch((err) => {
         alert("error", err);
+        console.log(err);
       })
     }
   }
-
-  const call = () => {
-    if(isLogin) {
-      console.log(loginData);
-    } else {
-      console.log(registerData);
-    }
-  };
 
   return (
   <>
@@ -92,7 +95,7 @@ function User() {
             </div>
             <div className="form-inner">
               {isLogin ? (
-                <form className="login">
+                <form className="login" onSubmit={handleSubmit}>
                   <div className="field">
                     <input type="text" placeholder="Email Address" name="email" onChange={handleInputChange} required />
                   </div>
@@ -102,12 +105,12 @@ function User() {
                   <div className="pass-link"><a href="#">Forgot password?</a></div>
                   <div className="field btn">
                     <div className="btn-layer"></div>
-                    <button type='button' onClick={handleSubmit}>Login</button>
+                    <button type="submit">Login</button>
                   </div>
                   <div className="signup-link">Not a member? <a href="#" onClick={switchToSignup}>Signup now</a></div>
                 </form>
               ) : (
-                <form className="signup">
+                <form className="signup" onSubmit={handleSubmit}>
                   <div className="field">
                     <input type="text" placeholder="User Name" name="userName" onChange={handleInputChange} required />
                   </div>
@@ -118,11 +121,11 @@ function User() {
                     <input type="password" placeholder="Password" name="password" onChange={handleInputChange} required />
                   </div>
                   <div className="field">
-                    <input type="password" placeholder="Confirm password" name="confirmPassword" onChange={handleInputChange} required />
+                    <input type="password" placeholder="Confirm password" name="cfp" onChange={handleInputChange} required />
                   </div>
                   <div className="field btn">
                     <div className="btn-layer"></div>
-                    <button type='button' onClick={handleSubmit}>Signup</button>
+                    <button type="submit">Signup</button>
                   </div>
                 </form>
               )}

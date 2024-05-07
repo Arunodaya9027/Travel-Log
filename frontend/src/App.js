@@ -10,7 +10,8 @@ import Page1 from "./routes/Page1";
 import IndianCards from "./components/CardPage/IndianCards";
 import IndiaExplore from "./components/Explore Pages/IndiaExplore";
 import NewTripForm from "./components/NewTripForm";
-import Userprofile from "./components/Userprofile";
+import ProfileScreen from "./components/ProfileScreen/ProfileScreen";
+import ProfileSetup from "./components/ProfileSetup";
 import News from "./routes/About";
 import User from "./components/LOGIN_UI/User";
 import Subscription from "./components/Subscription/Subscription";
@@ -29,7 +30,8 @@ const App = () => {
             <Route path="/explore/:country" element={<Page1 />} />
             <Route path="/explore/:country/cards" element={<IndianCards />} />
             <Route path="/explore/:country/:id" element={<IndiaExplore />} />
-            <Route path="/profile" element={<Userprofile />} />
+            <Route path="/profile" element={<ProfileScreen />} />
+            <Route path="/setup-profile/:id" element={<ProfileSetup />} />
             <Route path="/new/*" element={<NewTripForm/>} />
             <Route path="/signup" element={<User/>} />
             <Route path="/subscritpion" element={<Subscription/>} />

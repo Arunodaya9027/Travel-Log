@@ -2,6 +2,18 @@ import React from 'react'
 import "./Subscription.css"
 import axios from 'axios';
 import { toast } from "react-toastify";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+
+const CardContent = ({ title, price, quote, onClick }) => (
+  <Card.Body>
+    <h2>{title}</h2>
+    <p>Charge: ₹{price}</p>
+    <blockquote>"{quote}"</blockquote>
+    <button onClick={onClick}>Pay Now</button>
+  </Card.Body>
+);
 
 function Subscription() {
   const amount = 500;
@@ -95,12 +107,38 @@ function Subscription() {
     <div className="card-container">
       <div className="card">
         <div className="card-content">
-          <h2>Subscription Plan</h2>
-          <p>Charge: ₹199/-</p>
-          <blockquote>
-            "Travel is the only thing you buy that makes you richer."
-          </blockquote>
-          <button onClick={paymentHandler}>Pay Now</button>
+          <Row>
+            <Col md={4}>
+              <Card>
+                <CardContent
+                  title="Subscription Plan 1"
+                  price="199"
+                  quote="Travel is the only thing you buy that makes you richer."
+                  onClick={handlePayment}
+                />
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card>
+                <CardContent
+                  title="Subscription Plan 2"
+                  price="249"
+                  quote="Change your mind and change your life."
+                  onClick={handlePayment}
+                />
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card>
+                <CardContent
+                  title="Subscription Plan 3"
+                  price="299"
+                  quote="Life is what happens when you're busy making other plans."
+                  onClick={handlePayment}
+                />
+              </Card>
+            </Col>
+          </Row>
         </div>
       </div>
     </div>

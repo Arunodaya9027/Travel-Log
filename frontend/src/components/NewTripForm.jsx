@@ -128,10 +128,10 @@ function NewTripForm() {
 // }
 
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = (e) => {
     validationCheck(e);
     if(location.pathname.startsWith("/new/trip")) {
-      const res = await axios.post("http://localhost:5000/createJourney", formJourney)
+      const res = axios.post("http://localhost:5000/createJourney", formJourney)
       res.then((res) => {
         console.log(res);
         setFormJourney({});
@@ -206,7 +206,7 @@ function NewTripForm() {
 
       console.log("Updated form images:", form.images);
       // console.log(form.images);
-      const res = await axios.post("http://localhost:5000/newCard", form);
+      const res = axios.post("http://localhost:5000/newCard", form);
       res.then((res) => {
         console.log(res);
         setForm({});
@@ -483,7 +483,7 @@ function NewTripForm() {
                 name="images"
                 onChange={handleImageChange}
               /> */}
-             <CloudinaryUploadWidget uwConfig={cloudinaryConfig} setPublicId={setPublicId} setSecureUrls={setSecureUrls} />
+             <CloudinaryUploadWidget uwConfig={cloudinaryConfig} setPublicId={setPublicId} setSecureUrls={setSecureUrls} name="Upload" />
             </Form.Group>
             {/* <div style={{ width: "800px" }}>
               <AdvancedImage
