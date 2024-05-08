@@ -1,0 +1,63 @@
+.landScapeCard {
+  display: flex;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.8s;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* .explore{
+    height: 100vh;
+    overflow: scroll;
+} */
+
+.landScapeCard:hover {
+  box-shadow: 0 0 20px rgb(184, 195, 189);
+}
+
+.imgContainer {
+  display: flex;
+}
+
+.imgContainer img {
+  width: 250px;
+  height: 35vh;
+  border-radius: 10px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 70%;
+}
+
+.rightBar {
+  background-color: rgb(173, 155, 155);
+  padding: 10px;
+  margin-left: 20px;
+  width: 100%;
+  text-align: left;
+  margin-top: 20px;
+  border-radius: 10px;
+  position: sticky;
+}
+
+.rightBar ul{
+    list-style: none;
+    font-size: 1.7rem;
+    color: rgb(101, 47, 47);
+}
+
+.moreOption {
+  display: flex;
+  justify-content: space-between;
+  color: orange;
+  text-decoration: none;
+}
+
+.moreOption:hover {
+  cursor: pointer;
+}

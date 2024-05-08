@@ -1,0 +1,101 @@
+.MainNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    width: 105%;
+    height: 80px;
+    overflow: hidden;
+  }
+  .logo {
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    width: max-content;
+  }
+  
+  .logo:hover {
+    color: #fff;
+  }
+  
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
+    list-style: none;
+    align-items: center;
+    right: -100;
+  }
+  .nav-links {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+  }
+  .nav-links:hover {
+    background-color: #ff8c00;
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .log-nav {
+    position: relative; /* Needed for proper button positioning */
+    right: -750;
+  }
+
+  .pfp {
+    position: relative;
+    left: -250;
+    display: inline-block;
+  }
+
+  .profile-button {
+    position: relative; /* Needed for proper button positioning */
+    overflow: hidden; /* Ensures image doesn't overflow container */
+    border-radius: 50%; /* Creates the circular shape for the image container */
+    width: 10%; /* Adjust width as needed */
+    height: 5.5%; /* Adjust height as needed */
+    left: 260;
+    padding: 0.5rem 1rem;
+    cursor: pointer; 
+  }
+  
+  .dp {
+    width: 100%; /* Ensures image fills the container */
+    height: 100%; /* Ensures image fills the container */
+    object-fit: cover; /* Scales image to fill container while maintaining aspect ratio */
+    border-radius: 50%; /* Maintains the circular shape for the image itself */
+  }
+
+  .profile-dropdown {
+    position: absolute; /* Position the menu relative to the button */
+    top: 10%; /* Position below the button */
+    right: 5%; /* Align to the left of the button */
+    background-color: #253a6f; /* Menu background color */
+    list-style: none; /* Remove default list styling */
+    padding: 10px 0px; /* Remove default padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    z-index: 2;
+    /* min-height: 50%; */
+    /* Add additional styles for hover, focus, etc. (optional) */
+  }
+
+  
+  .profile-dropdown button {
+    /* background-color: transparent; Transparent background for buttons */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Indicate clickable behavior */
+    background-color: #253a6f; /* Text color for menu items */
+    color: white;
+    text-align: left; /* Left-align text */
+    width: 100%; /* Stretch button to fill menu item width */
+    /* Add additional styles for hover, focus, etc. (optional) */
+  }
+
+  .profile-dropdown button:hover {
+    background-color: black; /* Text color for menu items */
+  }

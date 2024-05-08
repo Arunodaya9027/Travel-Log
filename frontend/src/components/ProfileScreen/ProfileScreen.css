@@ -1,0 +1,198 @@
+/* .user-page {
+    width: 100%;
+    height: 230vh;
+    background: rgba(0, 0, 0, 0.7) url("../assets/sunset-3497071_1280.jpg");
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+.profile-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .profile-pic-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+  }
+  
+  .profile-pic {
+    width: 100%;
+    height: auto;
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .name {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .location {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .followers,
+  .following {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+  
+  .bio {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  .recent-trips,
+  .popular-posts {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .recent-trips li,
+  .popular-posts li {
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+  }
+  
+  .recent-trips a,
+  .popular-posts a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .recent-trips a:hover,
+  .popular-posts a:hover {
+    background-color: #ddd;
+  }
+  
+  .social-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .social-links li {
+    margin: 0 10px;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .testimonials {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .name {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .bio {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  .recent-trips, .popular-posts {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .recent-trips li, .popular-posts li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .social-links img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .newsletter-signup {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .newsletter-signup input {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-signup button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  } */
+
+  .profilePic {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .profileContainer {
+    display: flex;
+    margin: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+    .profileContainer {
+      flex-direction: column-reverse;
+    }
+  }

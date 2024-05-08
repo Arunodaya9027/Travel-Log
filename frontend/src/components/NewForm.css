@@ -1,0 +1,18 @@
+.tripForm{
+    background-color: rgb(62, 56, 56);
+    color: white;
+    text-align: left;
+    margin: 50px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.8s;
+}
+
+.tripForm:hover{
+    box-shadow: 0 0 20px rgb(137, 127, 127);
+}
+
+.cloudinary-container .cloudinary-button {
+    margin-left: 30px;
+    margin-top: 10px;
+}
