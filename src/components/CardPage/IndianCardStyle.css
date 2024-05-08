@@ -1,0 +1,27 @@
+.bg{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7) url("../../assets/India.png");
+    background-size: cover;
+    background-blend-mode: darken;
+    overflow: scroll;
+    overflow-x: hidden; 
+}
+
+.bg .heading{
+    color: white;
+    font-size: 60px;
+}
+
+.card-body{
+    padding: 0px;
+    background-color: antiquewhite;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: transparent;
+}

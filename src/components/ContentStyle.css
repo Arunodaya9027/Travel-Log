@@ -1,0 +1,43 @@
+.Main {
+  width: 100%;
+  /* height: 100vh; */
+  line-height: 1.8rem;
+}
+
+.Main-inner {
+  color: white;
+  width: 60%;
+  height: 60vh;
+  margin-top: 5%;
+  margin-left: 5%;
+  padding: 10px;
+  text-align: left;
+}
+.Main-inner h1 {
+  font-weight: bolder;
+  font-size: 4rem;
+}
+.Main-inner h3 {
+  font-size: 1.3rem;
+}
+
+.book-btn {
+  border: 1px solid white;
+  width: fit-content;
+  padding: 30px;
+  height: 10%;
+  margin: 10px 90px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
+  align-items: center;
+  border-radius: 15%;
+  background-color: rgb(128, 125, 125);
+  
+}
+.book-btn button {
+  margin: 0 auto;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+}
